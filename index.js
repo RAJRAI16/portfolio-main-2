@@ -16,3 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(skill); // Start observing each skill bar
     });
 });
+
+
+

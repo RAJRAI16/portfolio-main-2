@@ -212,6 +212,7 @@ button{
     color: black;
     box-shadow: 0 0 25px #b74b4b;
     gap: 20px;
+    transform: scale(1.3)
 }
 
 .typing-text{
@@ -274,7 +275,7 @@ button{
     transform: scale(1.1);
 }
 
-.card-group{
+/* .card-group{
     display: flex;
     align-items: center;
     justify-items: center;
@@ -289,18 +290,18 @@ button{
     border: 2px solid white;
 } */
 
-card-text{
+/* card-text{
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 2000;
-}
+} */
 /* .card-body{
     display: flex;
     align-content: center;
     justify-content: center;
 } */
 
-.card-title{
+/* .card-title{
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 4000;
@@ -318,7 +319,7 @@ card-text{
 
 .card-img-top:hover{
     transform: scale(1.1);
-}
+} */ */
 
 /* My Skills section */
 #skills {
@@ -329,8 +330,9 @@ card-text{
 
 #skills h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     color: #ddd;
+    text-align: center;
 }
 #skills h2:hover{
     color: #b74b4b;
@@ -350,7 +352,7 @@ card-text{
 }
 
 .skill:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) ;
 }
 .skill h3 {
     font-size: 1.5em;
@@ -379,25 +381,202 @@ card-text{
     
 }
 
+/* education */
+/* General Styles */
+
+
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eheading {
+    grid-column: span 2; /* Heading spans across both columns */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.eheading h2 {
+    font-size: 24px;
+    color: white;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.eheading h2:hover{
+    color: #b74b4b;
+    transform: scale(1.1) 
+    
+}
+
+/* Timeline Item Styles */
+.timeline-item {
+    background-color: black;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color:white;
+}
+
+.timeline-item span {
+    font-size: 14px;
+    color: #b74b4b;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.timeline-item p {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .timeline {
+        grid-template-columns: 1fr; /* One column layout for smaller screens */
+    }
+}
+
+
+/* experience */
+/* General styles */
+.experience-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eheading {
+    grid-column: span 2; /* Heading spans across both columns */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.eheading h2 {
+    font-size: 24px;
+    color: white;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.eheading h2:hover{
+    color: #b74b4b;
+    transform: scale(1.1);
+}
+
+
+
+/* Experience Item Styles */
+
+.experience-section{
+    background-color: black;
+
+}
+.experience-item {
+    display: flex; /* Display flex to align image and content side by side */
+    background-color:black;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-item img {
+    width: 100px; /* Set a fixed width for the image */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px; /* Space between image and content */
+}
+
+.experience-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+experience-content h3:hover{
+    color: #b74b4b;
+    transform: scale(1.1);
+}
+
+.experience-content span {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.experience-content p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .experience-section {
+        grid-template-columns: 1fr; /* One column layout for smaller screens */
+    }
+
+    .experience-item {
+        flex-direction: column; /* Stack image and content vertically on small screens */
+        align-items: center;
+    }
+
+    .experience-item img {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 15px;
+    }
+}
+
 
 
 /* Contact Form Section */
 #contact {
     height: 100vh; /* Full height of the viewport */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-content: center; /* Center vertically */
+     display: flex;
+    justify-content: center;  
+    align-content: center; 
     background-color: black;
     color: white;
 }
 
 .cheading {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #ccc;
-    text-align: center;
-    display: flex;
-    align-items: center;
+    font-size: 24px;
+    color: white;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .cheading:hover{
@@ -416,6 +595,7 @@ card-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .input-group {
@@ -536,3 +716,10 @@ textarea {
     }
 }
 
+footer p {
+    text-align: center;
+    color: #ccc;
+    font-size: xx-large;
+    font-weight: 3000;
+    
+}
