@@ -126,6 +126,22 @@ section{
     gap: 8rem;
     background-color: black;
 }
+.home-content{
+    animation-name: homecon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes homecon {
+    from {
+        transform: translateX(400px); /* Simplified to X-axis */
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
 .home .home-content h1{
     font-size: 6rem;
@@ -158,8 +174,20 @@ span{
     box-shadow: 0 0 25px solid #b74b4b;
     cursor: pointer;
     transition: 0.2s linear;
+    animation-name: homeimg;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
+@keyframes homeimg {
+    from {
+        transform: translateX(-400px); /* Simplified to X-axis */
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 .home-img img:hover{
     font-size: 1.8rem;
     font-weight: 500;
@@ -326,7 +354,10 @@ button{
     padding: 40px 20px;
     background-color: black;
     text-align: center;
+   /* This keeps the final position after animation ends */
 }
+
+
 
 #skills h2 {
     font-size: 2.5em;
@@ -343,6 +374,18 @@ button{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    animation-name: skills;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; 
+}
+@keyframes skills {
+    from {
+        transform: translateX(-400px); /* Simplified to X-axis */
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .skill {
@@ -417,12 +460,29 @@ button{
 }
 
 /* Timeline Item Styles */
+
+
+@keyframes timeline {
+    from {
+        transform: translateX(100vh); /* Simplified to X-axis */
+    }
+    to {
+        transform: translateX(60px);
+    }
+}
 .timeline-item {
     background-color: black;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    
+        animation-name: timeline;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+    
 }
 
 .timeline-item:hover {
@@ -503,6 +563,22 @@ button{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease;
+    
+        animation-name: experience;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+    
+}
+
+@keyframes experience {
+    from {
+        transform: translateX(-400px); /* Simplified to X-axis */
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .experience-item:hover {
@@ -579,11 +655,14 @@ experience-content h3:hover{
     margin-bottom: 10px;
 }
 
-.cheading:hover{
+.cheading h2:hover{
     color: #b74b4b;
     transform: scale(1.1);
 }
-
+.cheading h2{
+    text-align: center;
+    padding-bottom: 60px;
+}
 
 .contact-container {
     width: 500px;
@@ -596,7 +675,21 @@ experience-content h3:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation-name: contact;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
+@keyframes contact {
+    from {
+        transform: translateY(400px); /* Simplified to X-axis */
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 
 .input-group {
     margin-bottom: 20px;
